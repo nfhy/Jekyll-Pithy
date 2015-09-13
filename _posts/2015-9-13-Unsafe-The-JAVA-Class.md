@@ -86,9 +86,13 @@ public class Test {
 
 ~~~java
 Unsafe u = getUnsafeInstance();
+
 Test t = (Test) u.allocateInstance(Test.class);
+
 long b1 = u.objectFieldOffset(Test.class.getDeclaredField("intfield"));
+
 u.putInt(t, b1, 2);
+
 System.out.println("intfield:"+t.intfield);
 ~~~
 
@@ -103,11 +107,15 @@ System.out.println("intfield:"+t.intfield);
 
 ~~~java
 Field staticIntField = Test.class.getDeclaredField("staticIntField");
+
 Object o = u.staticFieldBase(staticIntField);
+
 System.out.prinln(o==Test.class);
+
 Long b4 = u.staticFieldOffset(staticIntField);
 //因为是静态变量，传入的Object参数应为class对象
 u.putInt(o, b4, 10);
+
 System.out.println("staticIntField:"+u.getInt(Test.class, b4));	
 ~~~
 
@@ -131,28 +139,41 @@ staticIntField:10
 
 ~~~java
 String s = "abc";
+
 //保存s的引用
 s.intern();
+
 //此时s1==s，地址相同
 String s1 = "abc";
+
 Unsafe u = getUnsafeInstance();
+
 //获取s的实例变量value
 Field valueInString = String.class.getDeclaredField("value");
+
 //获取value的变量偏移值
 long offset = u.objectFieldOffset(valueInString);
+
 //value本身是一个char[],要修改它元素的值，仍要获取baseOffset和indexScale
 long base = u.arrayBaseOffset(char[].class);
+
 long scale = u.arrayIndexScale(char[].class);
+
 //获取value
 char[] values = (char[]) u.getObject(s, offset);
+
 //为value赋值
 u.putChar(values, base + scale, 'c');
+
 System.out.println("s:"+s+" s1:"+s1);
+
 //将s的值改为 abc
 s = "abc";
+
 String s2 = "abc";
 
 String s3 = "abc";
+
 System.out.println("s:"+s+" s1:"+s1);
 ~~~
 
