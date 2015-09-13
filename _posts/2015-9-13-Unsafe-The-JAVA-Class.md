@@ -31,13 +31,21 @@ public static Unsafe getUnsafeInstance() throws Exception{
 
 ~~~java
 Unsafe u = getUnsafeInstance();
+
 int[] arr = {1,2,3,4,5,6,7,8,9,10};
+
 int b = u.arrayBaseOffset(int[].class);
+
 int s = u.arrayIndexScale(int[].class);
+
 u.putInt(arr, (long)b+s*9, 1);
+
 for(int i=0;i<10;i++){
+
 	int v = u.getInt(arr, (long)b+s*i);
+
 	System.out.print(v+“ ”);
+
 }
 ~~~
 
@@ -61,7 +69,7 @@ Initializes the class if it has not yet been. */
 public native Object allocateInstance(Class cls) throws InstantiationException;
 ~~~
 
-在不执行构造方法的前提下，获取一个类的实例，即使这个类的构造方法是私有的。
+allocateInstance: 在不执行构造方法的前提下，获取一个类的实例，即使这个类的构造方法是私有的。
 
 ##修改静态变量和实例变量的值
 
