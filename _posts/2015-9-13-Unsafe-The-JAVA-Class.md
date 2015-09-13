@@ -12,7 +12,7 @@ Unsafe类是java中非常特别的一个类。它名字就叫做“不安全”�
 
 任何关于Unsafe类的文章都不会推荐我们在代码中使用它，但这并不妨碍我们了解它可以做什么。下面我们来看下利用Unsafe类我们是否可以做点有趣的事情。
 
-###获取Unsafe实例
+##获取Unsafe实例
 
 ~~~java
 public static Unsafe getUnsafeInstance() throws Exception{
@@ -25,9 +25,9 @@ public static Unsafe getUnsafeInstance() throws Exception{
 
 通过java反射机制，我们跳过了安全检测，拿到了一个unsafe类的实例。
 
-***我找遍了Unsafe类的API，没有发现可以直接获取对象地址的方法，所有与操作地址相关的方法都要求一个Object类型参数，用来获取对象的初始地址，这一地址没有找到办法可以获取到。***
+***我找遍了Unsafe类的API，没有发现可以直接获取对象地址的方法，Unsafe中操作地址相关的方法都要求提供一个Object类型的参数，用来获取对象的初始地址。***
 
-###修改和读取数组中的值
+##修改和读取数组中的值
 
 ~~~java
 Unsafe u = getUnsafeInstance();
@@ -53,7 +53,7 @@ for(int i=0;i<10;i++){
 
 * 偏移值: 数组元素偏移值 = arrayBaseOffset+arrayIndexScalse\*i。
 
-###获取对象实例
+##获取对象实例
 
 ~~~java
 /** Allocate an instance but do not run any constructor.
@@ -63,7 +63,7 @@ public native Object allocateInstance(Class cls) throws InstantiationException;
 
 在不执行构造方法的前提下，获取一个类的实例，即使这个类的构造方法是私有的。
 
-###修改静态变量和实例变量的值
+##修改静态变量和实例变量的值
 
 先定义一个Test类
 
@@ -125,7 +125,7 @@ staticIntField:10
 
 ***我们通过Unsafe类修改了方法区中的信息。***
 
-###调戏String.intern
+##调戏String.intern
 
 在jdk7中，String.intern不再拷贝string对象实例，而是保存第一次出现的对象的引用。在下面的代码中，通过Unsafe修改被引用对象s的私有属性value达到间接修改s1的效果！
 
