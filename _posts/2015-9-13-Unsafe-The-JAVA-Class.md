@@ -20,7 +20,8 @@ public static Unsafe getUnsafeInstance() throws Exception{
 		Unsafe.class.getDeclaredField("theUnsafe");
 		unsafeStaticField.setAccessible(true);
 		return (Unsafe) unsafeStaticField.get(Unsafe.class);
-	}~~~
+}
+~~~
 
 通过java反射机制，我们跳过了安全检测，拿到了一个unsafe类的实例。
 
