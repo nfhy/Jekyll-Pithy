@@ -16,10 +16,10 @@ Unsafe类是java中非常特别的一个类。它名字就叫做“不安全”�
 
 ~~~java
 public static Unsafe getUnsafeInstance() throws Exception{
-		Field unsafeStaticField = 
-		Unsafe.class.getDeclaredField("theUnsafe");
-		unsafeStaticField.setAccessible(true);
-		return (Unsafe) unsafeStaticField.get(Unsafe.class);
+	Field unsafeStaticField = 
+	Unsafe.class.getDeclaredField("theUnsafe");
+	unsafeStaticField.setAccessible(true);
+	return (Unsafe) unsafeStaticField.get(Unsafe.class);
 }
 ~~~
 
@@ -51,7 +51,7 @@ for(int i=0;i<10;i++){
 
 * getInt(obj,offset): 获取数组对象obj的起始地址，加上偏移值，得到对应元素的地址，从而获得元素的值。
 
-* 偏移值: 数组元素偏移值 = arrayBaseOffset+arrayIndexScalse\*i。
+* 偏移值: 数组元素偏移值 = arrayBaseOffset + arrayIndexScalse \* i。
 
 ##获取对象实例
 
