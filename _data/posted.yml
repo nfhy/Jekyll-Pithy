@@ -13,3 +13,9 @@
 - title: 为什么匿名内部类和局部内部类只能访问final变量
   url: http://blog.csdn.net/salahg/article/details/7529091
   date: 2015-9-13
+- title: Checked exceptions thrown in initializer blocks can be declared by the constructors
+  url: http://howtodoinjava.com/2013/10/19/checked-exceptions-thrown-in-initializer-blocks-can-be-declared-by-the-constructors/
+  date: 2015-9-13
+- title: Instances of same class can access private members of each other
+  url:http://howtodoinjava.com/2013/10/16/instances-of-same-class-can-access-private-members-of-each-other/
+  date: 2015-9-13
