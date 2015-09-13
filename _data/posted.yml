@@ -10,3 +10,6 @@
 - title: Mac下Sublime Text 2 使用心得
   url: http://www.jianshu.com/p/25cdc7d608bb
   date: 2015-9-11
+- title: 为什么匿名内部类和局部内部类只能访问final变量
+  url: http://blog.csdn.net/salahg/article/details/7529091
+  date: 2015-9-13
