@@ -13,7 +13,7 @@
 - title: 为什么匿名内部类和局部内部类只能访问final变量
   url: http://blog.csdn.net/salahg/article/details/7529091
   date: 2015-9-13
-- title: Checked exceptions thrown in initializer blocks can be declared by the constructors
+- title: Checked exceptions thrown in initializer blocks can be declared by the constructors(加深对象初始化的理解)
   url: http://howtodoinjava.com/2013/10/19/checked-exceptions-thrown-in-initializer-blocks-can-be-declared-by-the-constructors/
   date: 2015-9-13
 - title: Instances of same class can access private members of each other
@@ -21,4 +21,16 @@
   date: 2015-9-13
 - title: 你的努力程度之低，根本轮不到拼天赋(就算是鸡汤，也是好鸡汤)
   url: http://zhuanlan.zhihu.com/kungfucharlie/20129091
+  date: 2015-9-14
+- title: Poor misunderstood 'var'(关于javaScript中‘var’的误解)
+  url: http://blog.niftysnippets.org/2008/03/poor-misunderstood-var.html
+  date: 2015-9-14
+- title: The this keyword(javaScript中的this关键字)
+  url: http://www.quirksmode.org/js/this.html
+  date: 2015-9-14
+- title: Details of the object model(javaScript中的对象模型)
+  url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+  date: 2015-9-14
+- title: Closures(javaScript中的闭包)
+  url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
   date: 2015-9-14
