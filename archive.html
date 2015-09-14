@@ -23,14 +23,14 @@ layout: default
 <h2>转载</h2>
 <ul>
 {%for post in site.data.posted %}
-    <li><span>{{ post.date | date: "%b %d" }}</span>» <a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li><span>{{ post.date | date: "%b %d" }}</span>» <a href="{{ post.url }}" target="_blank">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
 
 <h2>资讯</h2>
 <ul>
 {%for post in site.data.news %}
-    <li><span>{{ post.date | date: "%b %d" }}</span>» <a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li><span>{{ post.date | date: "%b %d" }}</span>» <a href="{{ post.url }}" target="_blank">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
 </div>
