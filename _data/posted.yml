@@ -34,3 +34,6 @@
 - title: Closures(javaScript中的闭包 )
   url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
   date: 2015-9-14
+- title: Closures are not complicated
+  url: http://blog.niftysnippets.org/2008/02/closures-are-not-complicated.html
+  date: 2015-9-14
