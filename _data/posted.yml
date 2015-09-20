@@ -37,3 +37,6 @@
 - title: Closures are not complicated
   url: http://blog.niftysnippets.org/2008/02/closures-are-not-complicated.html
   date: 2015-9-14
+- title: JVM的重排序
+  url: http://ifeve.com/jvm-reordering/
+  date: 2015-9-17
