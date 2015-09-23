@@ -40,7 +40,7 @@ excerpt: 四个常见寻路算法的原理、实现和演示
 
  ![alt text](https://raw.githubusercontent.com/nfhy/medias/master/images/AstarPathFinding/BFS.gif "Breadth-First-Search")
 
- [演示程序](http://nfhy.wang/html/BFS.html){:target="_blank"}
+<p><a href="http://nfhy.wang/html/BFS.html" target="_blank">演示程序</a></p>
 
 蓝色方块是不可通过的，S为扫描的起始点，一层层向外扩展，最终所有可到达的节点都被扫描，这一过程有时被称为“flood fill”。对于每一个被扫描的节点，为其添加一个指向父节点的方向箭头，然后你会发现，从地图上任意一点开始，只要沿着箭头的方向移动，总能走到起始点S，而且走过的路径必然是最短路径之一。
 
@@ -69,7 +69,9 @@ excerpt: 四个常见寻路算法的原理、实现和演示
 
  ![alt text](https://raw.githubusercontent.com/nfhy/medias/master/images/AstarPathFinding/DIJ.gif "Dijkstra`s")
  
- [演示程序](http://nfhy.wang/html/DIJ.html){:target="_blank"}
+ 
+<p><a href="http://nfhy.wang/html/DIJ.html" target="_blank">演示程序</a></p>
+
  
 蓝色区域不可通过，白色区块代表平原地形，移动一格消耗为1，绿色区块代表森林，移动一格消耗为5，黑色区块带表山脉，移动一格消耗为10。区块中的数字表示从起始点到当前区块的最小移动消耗。从演示程序可以看出，由于优先队列的存在，区块消耗越高，进入closeList的时间越靠后，这与广度优先算法中一层层向外扩展的方式不同。
 
@@ -108,7 +110,7 @@ Manhattan_distance = abs(x1-x)+abs(y1-y)
 
  ![alt text](https://raw.githubusercontent.com/nfhy/medias/master/images/AstarPathFinding/GBF.gif "Greed-Best-Fisrt-Search")
 
- [演示程序](http://nfhy.wang/html/GBF.html){:target="_blank"}
+<p><a href="http://nfhy.wang/html/GBF.html" target="_blank">演示程序</a></p>
  
 演示程序中，暗蓝色表示节点是障碍物，土黄色表示节点处于closeList中，淡蓝色表示节点处于openList中，白色表示节点处于搜索出的结果路径上。点击地图上的区块可以重新设置目标节点E。可以看出，当目标节点处于地图左下方时，搜索路径很明显不是最短路径。虽然算法不能保证可以找到最短路径，但当地形不复杂时（如gif中起点和终点间没有障碍物），路径搜索速度是四种算法中最快的。
 
@@ -143,7 +145,7 @@ F(N)=G(N)+H(N)
 
 ![alt text](https://raw.githubusercontent.com/nfhy/medias/master/images/AstarPathFinding/AS-slow.gif "Astar")
 
- [演示程序](http://nfhy.wang/html/raw-Astar.html){:target="_blank"}
+<p><a href="http://nfhy.wang/html/raw-Astar.html" target="_blank">演示程序</a></p>
  
 演示gif中，土黄色表示节点在closeList中，淡蓝色表示节点在openList中，深蓝色表示节点不可通过，白色表示节点在搜索出的结果路径上。可以看出，A\*算法总是设法保证搜索路径上的F值保持不变。
 
@@ -185,10 +187,9 @@ Manhattan_distance = abs(x1-x)+abs(y1-y)*1.01
 
 ![alt text](https://raw.githubusercontent.com/nfhy/medias/master/images/AstarPathFinding/AS-modify.gif "Astar")
 
-
- [演示程序](http://nfhy.wang/html/Astar.html){:target="_blank"}
+<p><a href="http://nfhy.wang/html/Astar.html" target="_blank">演示程序</a></p>
  
- [当允许斜方向移动时的演示程序](http://nfhy.wang/html/Diagonal-Astar.html){:target="_blank"}
+<p><a href="http://nfhy.wang/html/Diagonal-Astar.html" target="_blank">允许斜方向移动演示程序</a></p>
  
 可以看到，扫描过程非常高效，所有closeList中的节点都出现在了结果路径上。这是因为A\*算法会沿着F值变小的方向搜索，由于曼哈顿公式的调整，原本F值相等的节点不再想等，同一列由上到下递减，这就产生了gif中的现象，结果路径总是先向下走，直到和目标节点同一行后，再向右走。
 
