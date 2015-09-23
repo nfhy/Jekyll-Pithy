@@ -47,9 +47,11 @@ category: JAVA
 * 第2-9位共8位为指数为E，取值范围0~255，减去偏移量127后，指数取值范围-127-128，其中取值0(全0)和255(全1)有特殊用途，因此指数实际取值范围-126~127
 * 剩余23位为小数位，表示24数字，省略了前导整数位1，即一般情况下M≥1.0
 
-当指数位取值1，小数位取最小值时，即0x00800000，获得float最小正标准值。
+(对于Double，E为11位，M为52位)
 
-关于最小正标准值，摘抄一段stackoverflow中的回答：
+当指数位取值1，小数位取最小值时，即0x00800000，获得float最小正标准值2^(-126)。
+
+关于最小正标准值与最小正值的区别，摘抄一段stackoverflow中的回答：
 >For the single format, the difference between a normal number and a subnormal number is that the leading bit of the significand (the bit to left of the binary point) of a normal number is 1, whereas the leading bit of the significand of a subnormal number is 0. Single-format subnormal numbers were called single-format denormalized numbers in IEEE Standard 754.
 
 也就是说，最小正标准值是保证小数位前导位为1的最小值。
