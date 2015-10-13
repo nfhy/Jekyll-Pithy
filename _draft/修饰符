@@ -1,0 +1,59 @@
+class:
+	public
+	default
+	abstract
+	final
+	strictfp
+
+	tips:
+		1. abstract类仍可以执行main函数
+		2. final修饰的class不能被继承
+		3. 没有显式声明构造方法时，构造方法与类的修饰符相同
+		4. 抽象类会声明构造方法（合理，抽象类有成员变量需要初始化）
+
+interface:
+	public: 是否声明无关，最终都是public
+	abstract: 是否声明无关，最终都是abstract
+
+	tips:
+		1. 接口中声明的所有方法都是abstract方法，只有public,abstract修饰符
+		2. 接口中声明的所有成员变量都是public final static，只有public,final,static修饰符
+
+package:
+	static
+
+field:
+	public
+	protected
+	default
+	private
+	static
+	final
+	transient
+	volatile
+
+	tips:
+		1. final修饰的引用变量，不变的是这一引用，被引用的对象可以任意变化。
+
+method:
+	public
+	protected
+	default
+	private
+	abstract
+	static
+	final
+	synchronized
+	native
+	strictfp
+
+	tips:
+		1. final修饰的方法不能被重写
+		2. final修饰的方法使用内联方式
+		3. 私有方法隐式声明为final
+		4. native方法没有方法体
+		5. abstract方法没有方法体
+		6. synchronzied 静态方法锁类，非静态方法锁对象
+
+block:
+	static

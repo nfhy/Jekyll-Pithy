@@ -1,0 +1,7 @@
+java se7 新特性
+1.字面值中使用下划线 111_111_111
+2.二进制字面量 int i = 0b101
+3.catch多种类型的异常 catch(ExceptionType1|ExceptionType2 e)
+4.try中的autoclose资源
+5.switch中的String
+6.泛型类型推断

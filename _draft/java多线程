@@ -1,0 +1,4 @@
+1.有synchronized的地方不一定有wait,notify
+2.有wait,notify的地方必有synchronized.
+
+这是因为wait和notify不是属于线程类，而是每一个对象都具有的方法，而且，这两个方法都和对象锁有关，有锁的地方，必有synchronized。
