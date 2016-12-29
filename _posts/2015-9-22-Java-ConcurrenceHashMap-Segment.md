@@ -9,6 +9,8 @@ ConcurrentHashMap通过将完整的表分成若干个segment的方式实现锁�
 下面来看下segment的实现：
 
 **segment是一类特殊的hash表，继承了ReentrantLock类实现锁功能**
+
+
 ~~~java     
     static final class Segment<K,V> extends ReentrantLock implements Serializable {
     /*
